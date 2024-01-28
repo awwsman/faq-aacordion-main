@@ -1,0 +1,120 @@
+/* font-family: 'Work Sans', sans-serif */
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-pink: hsl(275, 100%, 97%);
+  --Grayish-purple: hsl(292, 16%, 49%);
+  --Dark-purple: hsl(292, 42%, 14%);
+  --Dark-purplee: rgb(160, 49, 177);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Work Sans", sans-serif;
+}
+
+main {
+  /* border: 2px solid red; */
+  height: 140vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  background: url(./assets/images/background-pattern-mobile.svg) no-repeat
+    var(--Light-pink);
+  width: 375px;
+}
+hr {
+  border: 1px solid var(--Light-pink);
+}
+section {
+  /* border: 2px solid green; */
+  background-color: white;
+  padding: 1rem 1.3rem;
+  margin: 0 1.5rem;
+  border-radius: 0.5rem;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  /* border: 2px solid red; */
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 0.6rem 0;
+}
+.heading img {
+  width: 25px;
+}
+
+.question {
+  padding: 0.7rem;
+}
+
+.question-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+.question-title:hover {
+  color: var(--Dark-purplee);
+}
+
+.question-title h3 {
+  font-size: 16px;
+}
+
+button {
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+.minus {
+  display: none;
+}
+
+.answer {
+  display: none;
+  padding-bottom: 1rem;
+  color: var(--Grayish-purple);
+}
+
+.answer p {
+  /* font-size: 15px; */
+}
+
+/* active states */
+.active .plus {
+  display: none;
+}
+.active .minus {
+  display: block;
+}
+.active .answer {
+  display: block;
+}
+
+@media screen and (width > 376px) {
+  main {
+    background: url(./assets/images/background-pattern-desktop.svg) no-repeat
+      var(--Light-pink);
+    height: 100vh;
+    width: 100vw;
+  }
+
+  section {
+    width: 90vw;
+    max-width: 500px;
+  }
+
+  .heading img {
+    width: 34px;
+  }
+  .heading {
+    font-size: 3rem;
+  }
+}
